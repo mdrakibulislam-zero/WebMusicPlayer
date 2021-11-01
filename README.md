@@ -1,5 +1,5 @@
 ## Web Music Player:
-This is a simple music player based on Web which made with HTML, CSS and JavaScript.
+This is a simple music player based on Web which made with HTML, CSS and JavaScript. It's able to play music from the added directory.
 
 
 ## Outcome:
@@ -9,20 +9,24 @@ src="https://github.com/mdrakibulislam-zero/WebMusicPlayer/blob/main/Outcome.png
 
 
 ## What Have I Done:
-I've made this music player using HTML, CSS and JavaScript. I've also created a list.js file for add music and information. It's a web based music player with attractive design. It's able to play music from the selected directory.
+I've made this music player using HTML, CSS and JavaScript. I've also created a list.js file for add music and information. I've used the CDN of font-awesome 5.15.3 from CDNJS for use the icons.
+
+A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+
+Font Awesome is a font and icon toolkit based on CSS and Less. As of 2020, Font Awesome was used by 38% of sites that use third-party font scripts, placing Font Awesome in second place after Google Fonts.
 
 
 ## Required Skills:
 - Basic HTML
 - Basic CSS
-- Intermediate JavaScript
+- Basic JavaScript
 
 
 ## Usage:
-- First of all you need to put the HTML, CSS and JavaScript files in the same folder.
+- First of all you need to download the entire folder.
 - Then open the index.html file in any browser.
 - You're done! Enjoy the music player.
-- You can add music and music information using the list.js file.
+- You also can use the music player online by using this <a href="https://mdrakibulislam-zero.github.io/WebMusicPlayer/" > link</a>.
 
 
 ## Tutorial:
