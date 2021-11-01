@@ -15,7 +15,7 @@ I've made this music player using HTML, CSS and JavaScript. I've also created a 
 ## Required Skills:
 - Basic HTML
 - Basic CSS
-- Basic JavaScript
+- Intermediate JavaScript
 
 
 ## Usage:
