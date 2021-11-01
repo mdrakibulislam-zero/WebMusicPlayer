@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="Main">
+      <div class="TopSection">
+        <h5>Music List</h5>
+      </div>
+      <div class="Track">
+        <div class="SmallPlayer">
+          <div class="SmallPlayerImage">
+            <div class="PlayingImage">
+              <img src="images/01.jpg" alt="" />
+            </div>
+            <div class="WaveAnimation">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </div>
+          </div>
+          <div class="MusicDetail">
+            <p id="MusicName">A Thousand Years</p>
+            <p id="ArtistName">Christina Perri</p>
+          </div>
+          <i class="fas fa-arrow-alt-circle-up" aria-hidden="true" id="UpPlayer"></i>
+        </div>
+        <div class="PopUpPlayer">
+          <div class="Top">
+            <i class="fas fa-list" aria-hidden="true" id="DownPlayer"></i>
+          </div>
+          <div class="MusicImage">
+            <img src="images/01.jpg" alt="" />
+          </div>
+          <div class="MusicDescription">
+            <h3 id="CurrentTrackName">A Thousand Years</h3>
+            <p id="CurrentArtistName">Christina Perri</p>
+          </div>
+          <div class="Control">
+            <div class="ProgressPart">
+              <input type="range" min="0" max="100" value="0" id="Slider" onchange="ChangeDuration()" />
+              <div class="Durations">
+                <p id="CurrentDuration">0:00</p>
+                <p id="TotalDuration">0:00</p>
+              </div>
+            </div>
+            <div class="ControlButton">
+              <button id="BackwardButton">
+                <i class="fas fa-step-backward" aria-hidden="true"></i>
+              </button>
+              <button id="PlayPauseButton">
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+              <button id="ForwardButton">
+                <i class="fas fa-step-forward" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/list.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

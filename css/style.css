@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #e0e5ec;
+}
+.Main {
+  position: relative;
+  overflow: hidden;
+  width: 370px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #f2f3f5;
+}
+.TopSection {
+  margin: 1em;
+}
+.TopSection h5 {
+  color: rgb(70, 70, 70);
+  font-size: 21px;
+  font-family: "Lato", sans-serif;
+}
+.Track {
+  width: 90%;
+  max-height: 75vh;
+  overflow-y: scroll;
+  padding: 10px 0 50px;
+}
+.Track::-webkit-scrollbar {
+  display: none;
+}
+.Track .Music:not(:first-child) {
+  margin-top: 1em;
+}
+.Track .Music {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(70, 70, 70);
+  padding: 0 5px;
+}
+.Track .Music .More {
+  margin-left: 1em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Track .Music .MusicInfo p:nth-child(2) {
+  font-size: 13px;
+  margin-top: 10px;
+  color: rgb(125, 117, 117);
+}
+.Track .Music #PlayButton {
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  color: rgb(125, 117, 117);
+  box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #f2f3f5;
+}
+.Track .Music button i {
+  font-size: 1em;
+}
+.Track .Music:not(:first-child) {
+  margin-top: 13px;
+}
+.Track .Music .Image {
+  height: 50px;
+  width: 65px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.Track .Music .Image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.Control {
+  width: 75%;
+  margin-top: 2.5em;
+}
+.ProgressPart {
+  width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ProgressPart p {
+  color: rgb(125, 117, 117);
+}
+.ProgressPart .Durations {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.ProgressPart #Slider {
+  width: 100%;
+}
+.ControlButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ControlButton button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 0.5em;
+  background: none;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.ControlButton button:hover {
+  box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #f2f3f5;
+}
+.ControlButton button i {
+  font-size: 1.3em;
+}
+.ControlButton button:nth-child(2) {
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #f2f3f5;
+}
+.ControlButton button i {
+  color: rgb(125, 117, 117);
+}
+#Slider {
+  -webkit-appearance: none;
+  outline: none;
+  width: 85%;
+  height: 4px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+  background: rgb(125, 117, 117);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #f2f3f5;
+}
+.Main .PopUpPlayer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e0e5ec;
+  padding: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  transform: translateY(110%);
+  transition: 0.4s;
+  box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #f2f3f5;
+}
+.Top i {
+  margin-top: 1em;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: rgb(70, 70, 70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #f2f3f5;
+}
+.PopUpPlayer .MusicImage {
+  margin-top: 3em;
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 2px #e0e5ec, 5px 5px 10px #babecc,
+    -5px -5px 10px #f2f3f5;
+}
+.PopUpPlayer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.MusicDescription {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.MusicDescription h3 {
+  font-size: 1.2em;
+  color: rgb(70, 70, 70);
+}
+.MusicDescription p {
+  color: rgb(125, 117, 117);
+  margin-top: 5px;
+}
+.SmallPlayer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #babecc;
+  transition: 0.4s;
+  transform: translateY(80px);
+}
+.SmallPlayerImage {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-right: 2em;
+}
+.PlayingImage {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.SmallPlayer p {
+  color: rgb(125, 117, 117);
+}
+.SmallPlayerImage .PlayingImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#UpPlayer {
+  position: absolute;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: rgb(70, 70, 70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #f2f3f5;
+}
+#ArtistName {
+  font-size: 13px;
+  margin-top: 5px;
+  color: rgb(125, 117, 117);
+}
+.WaveAnimation {
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+}
+.WaveAnimation li {
+  list-style: none;
+  width: 5px;
+  margin: 0 3px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: animate 0.5s linear alternate infinite;
+}
+.WaveAnimation li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.WaveAnimation li:nth-child(3) {
+  animation-delay: 1s;
+}
+.WaveAnimation li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.WaveAnimation li:nth-child(5) {
+  animation-delay: 1s;
+}
+@keyframes animate {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 20px;
+  }
+}
